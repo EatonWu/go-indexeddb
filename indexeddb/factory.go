@@ -3,6 +3,7 @@ package indexeddb
 import (
 	"bytes"
 	"fmt"
+	"github.com/syndtr/goleveldb/leveldb/opt"
 
 	"github.com/huffduff/go-indexeddb/indexeddb/internal"
 )
@@ -12,8 +13,8 @@ import (
 // The Migrate function will only fire if the exisitng version is lower than the
 // requested version and no other database related errors have been triggered.
 // returning an error will rollback the migration and fail.
-func Open(name string, version uint, path string) *migrator {
-	def, err := internal.OpenDatabase(name, path)
+func Open(name string, version uint, path string, options *opt.Options) *migrator {
+	def, err := internal.OpenDataBaseWithOptions(name, path, options)
 	if err != nil {
 		return migrateError(err)
 	}

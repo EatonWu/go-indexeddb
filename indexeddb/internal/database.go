@@ -175,3 +175,29 @@ func OpenDatabase(name string, path string) (*Database, error) {
 	}
 	return &def, nil
 }
+
+func OpenDataBaseWithOptions(name string, path string, opts *opt.Options) (*Database, error) {
+	if opts == nil {
+		opts = &opt.Options{}
+	}
+
+	h, err := leveldb.OpenFile(filepath.Join(path, name), opts)
+	if err != nil {
+		return nil, err
+	}
+
+	def := Database{h, name, 0, make(map[string]*Store)}
+
+	data, err := h.Get(Key{}.forCore(), nil)
+	if err != nil {
+		if err != leveldb.ErrNotFound {
+			return nil, err
+		}
+	} else {
+		err = json.Unmarshal(data, &def)
+		if err != nil {
+			return nil, err
+		}
+	}
+	return &def, nil
+}
