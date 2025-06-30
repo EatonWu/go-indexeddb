@@ -27,3 +27,7 @@ func (p *Database) Transaction(scope []string, durability TransactionDurability)
 func (p *Database) ReadonlyTransaction(scope []string, durability TransactionDurability) (*ReadonlyTransaction, error) {
 	return newReadonlyTransaction(p.def, scope, durability)
 }
+
+func (p *Database) GetUnderlyingDatabase() *internal.Database {
+	return p.def
+}
