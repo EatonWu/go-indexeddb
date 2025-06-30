@@ -1,7 +1,7 @@
 package indexeddb
 
 import (
-	"github.com/huffduff/go-indexeddb/indexeddb/internal"
+	"github.com/EatonWu/go-indexeddb/indexeddb/internal"
 )
 
 type Database struct {

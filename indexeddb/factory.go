@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 
-	"github.com/huffduff/go-indexeddb/indexeddb/internal"
+	"github.com/EatonWu/go-indexeddb/indexeddb/internal"
 )
 
 // Open initializes a database and returns an initialization struct.

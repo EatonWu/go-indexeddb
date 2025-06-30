@@ -3,7 +3,7 @@ package internal
 import (
 	"fmt"
 
-	"github.com/huffduff/go-indexeddb/bytewise"
+	"github.com/EatonWu/go-indexeddb/bytewise"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )
 

@@ -3,7 +3,7 @@ package indexeddb
 import (
 	"fmt"
 
-	"github.com/huffduff/go-indexeddb/indexeddb/internal"
+	"github.com/EatonWu/go-indexeddb/indexeddb/internal"
 	"github.com/syndtr/goleveldb/leveldb"
 )
 

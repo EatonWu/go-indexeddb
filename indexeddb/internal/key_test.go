@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/huffduff/go-indexeddb/bytewise"
+	"github.com/EatonWu/go-indexeddb/bytewise"
 )
 
 var ordered []Key = []Key{
