@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/huffduff/go-indexeddb/indexeddb"
+	"github.com/EatonWu/go-indexeddb/indexeddb"
 )
 
 type Article struct {

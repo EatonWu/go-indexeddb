@@ -1,4 +1,4 @@
-module github.com/huffduff/go-indexeddb
+module github.com/EatonWu/go-indexeddb
 
 go 1.18
 
