@@ -52,7 +52,7 @@ func main() {
 	flag.StringVar(&path, "path", "./", "set the root database path")
 	flag.Parse()
 
-	db, err := indexeddb.Open("blog", 1, path).Migrate(migrate)
+	db, err := indexeddb.Open("blog", 1, path, nil).Migrate(migrate)
 	if err != nil {
 		panic(err)
 	}
